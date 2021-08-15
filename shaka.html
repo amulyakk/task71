@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Test</title>
+
+    <script src="shaka-player.compiled.js"></script>
+</head>
+
+<body>
+    <video id="video" width="640" height="480" crossorigin="anonymous" controls>
+      
+    </video>
+</body>
+<script>
+    function initPlayer() {
+
+        shaka.polyfill.installAll();
+
+
+        var video = document.getElementById('video');
+
+
+        var player = new shaka.player.Player(video);
+
+
+        window.player = player;
+
+
+        player.addEventListener('error', function(event) {
+            console.error(event);
+        });
+
+
+        var mpdUrl = 'https://turtle-tube.appspot.com/t/t2/dash.mpd';
+        var estimator = new shaka.util.EWMABandwidthEstimator();
+        var source = new shaka.player.DashVideoSource(mpdUrl, null, estimator);
+
+        // Load the source into the Player.
+        player.load(source);
+        var url = "(v1.mp4);
+
+
+        var context = new Dash.di.DashContext();
+        var player = new MediaPlayer(context);
+        player.startup();
+        player.attachView(document.querySelector("#videoplayer"));
+        player.attachSource(url);
+    }
+    };
+    document.addEventListener('DOMContentLoaded', initPlayer);
+</script>
+
+</html>

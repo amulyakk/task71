@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>
+        video Grid
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1> Video Gallery</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="a.jpg">
+                    <a href="https://www.youtube.com/embed/7-sE2-ZIz44"><img src="play.jpg " class="play-btn "> </div>
+            </div>
+            <div class=" col ">
+                <div class="small-img-row ">
+                    <div class="small-img ">
+                        <img src="j.jpg ">
+                        <a href="https://www.youtube.com/embed/7-sE2-ZIz44"><img src="play.jpg " class="play-btn "></a>
+                    </div>
+
+                    <p>
+                        The alladin and jinnie movie <br> which is a fairy tale, intresting<br> also suspensious...<br>
+                    </p>
+
+                </div>
+
+
+
+                <div class=" small-img-row ">
+                    <div class="small-img ">
+                        <img src="y.jpg ">
+                        <a href="https://www.youtube.com/embed/7-sE2-ZIz44">
+
+                            <img src="play.jpg " class="play-btn ">
+                        </a>
+                    </div>
+                    <p>
+                        The superman movie which is a childrens fav ,thriller also a action movie......<br>
+                    </p>
+
+                </div>
+
+
+
+                <div class=" small-img-row ">
+                    <div class="small-img ">
+                        <img src="s.jpg ">
+                        <a href="https://www.youtube.com/embed/7-sE2-ZIz44"><img src="play.jpg " class="play-btn ">
+                    </div>
+
+                    <p>
+                        The batman movie <br> which is a fairy tale,thriller also a action movie......<br>
+                    </p>
+
+                </div>
+
+
+
+                <div class=" small-img-row ">
+                    <div class="small-img ">
+                        <img src="strocj.jpg ">
+                        <a href="https://www.youtube.com/embed/7-sE2-ZIz44"><img src="play.jpg " class="play-btn ">></div>
+
+                    <p>
+                        The movie of strocks and his friends which is a thriller & action movie....
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" video-player " id="videoplayer ">
+        <video width=" 100% " controls autoplay id=" myvideo ">
+            <source src= "v1.mp4 " type="video/mp4 ">
+        </video>
+        <img src=" no.jpg " class="close-btn " onclick="stopvideo() ">
+    </div>
+
+    <script>
+        function playvideo() {
+            var videoplayer = document.getElementById("videoplayer ");
+            var myvideo = document.getElementById("myvideo ");
+
+            function stopvideo() {
+                videoplayer.style.display = "none ";
+            }
+
+            function playVideo(file) {
+                myVideo.src = file;
+                videoplayer.style.display = "block ";
+
+            }
+
+
+        }
+    </script>
+</body>
+
+
+</html>
